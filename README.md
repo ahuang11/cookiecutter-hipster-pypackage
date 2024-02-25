@@ -17,7 +17,7 @@ Cookiecutter template for a cutting-edge Python package: Hatch, ruff, mypy, GitH
 Generate the project:
 
 ```bash
-cookiecutter https://github.com/frankie567/cookiecutter-hipster-pypackage
+cookiecutter https://github.com/ahuang11/cookiecutter-hipster-pypackage
 ```
 
 The generator will automatically call `hatch env create` at the end.
@@ -35,7 +35,7 @@ Then, for the GitHub Actions pipelines to work correctly, you should:
 [cruft](https://github.com/cruft/cruft) is a layer above Cookiecutter allowing you to update your project from the template after it has been generated.
 
 ```bash
-cruft create https://github.com/frankie567/cookiecutter-hipster-pypackage
+cruft create https://github.com/ahuang11/cookiecutter-hipster-pypackage
 ```
 
 ## License
