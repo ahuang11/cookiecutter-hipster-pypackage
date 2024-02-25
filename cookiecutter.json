@@ -1,8 +1,8 @@
 {
-    "full_name": "King Arthur",
-    "email": "king.arthur@camelot.bt",
-    "github_username": "king-arthur",
-    "project_name": "Holy Grail",
+    "full_name": "Andrew Huang",
+    "email": "hey.at.py@gmail.com",
+    "github_username": "ahuang11",
+    "project_name": "testingo",
     "dist_name": "{{cookiecutter.project_name.lower().replace(' ', '-')}}",
     "package_name": "{{cookiecutter.dist_name.replace('-', '_')}}",
     "project_short_description": "",
