@@ -38,30 +38,32 @@ index-servers =
   password = pypi-abcdefghij...
 ```
 
-1. Then push `v0.0.0`
+2. Then push `v0.0.0`
 
 ```
 hatch build
 twine upload dist/*
 ```
 
-1. Create another API token for the project thru https://pypi.org/manage/account/
+---
+
+3. Create another API token for the project thru https://pypi.org/manage/account/
 
 <img width="382" alt="image" src="https://github.com/ahuang11/cookiecutter-hipster-pypackage/assets/15331990/9b9d2162-9cdf-4bae-8a22-6ee9789a537a">
 
-1. Enable GitHub Pages in settings > pages
+4. Enable GitHub Pages in settings > pages
 
 <img width="801" alt="image" src="https://github.com/ahuang11/cookiecutter-hipster-pypackage/assets/15331990/accd33a5-dc64-4df1-a009-07a3eed0bc38">
 
-1. Set up `PYPI_API_TOKEN` in settings > secrets > actions
+5. Set up `PYPI_API_TOKEN` in settings > secrets > actions
 
 <img width="1215" alt="image" src="https://github.com/ahuang11/cookiecutter-hipster-pypackage/assets/15331990/7328fc80-4613-40d8-99a3-15af830d2bec">
 
-1. Set up `CODECOV_TOKEN` thru https://app.codecov.io/gh/ in settings > secrets > actions
+6. Set up `CODECOV_TOKEN` thru https://app.codecov.io/gh/ in settings > secrets > actions
 
 <img width="668" alt="image" src="https://github.com/ahuang11/cookiecutter-hipster-pypackage/assets/15331990/1d6e7af0-25de-4101-849f-ea44ab0f6c50">
 
-1. Now you can release to PyPi by making a tag!
+7. Now you can release to PyPi by making a tag!
 
 <img width="1169" alt="image" src="https://github.com/ahuang11/cookiecutter-hipster-pypackage/assets/15331990/7820461a-d559-4018-b50c-c77a612cb81d">
 
