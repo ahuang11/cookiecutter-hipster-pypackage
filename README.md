@@ -22,13 +22,50 @@ cookiecutter https://github.com/ahuang11/cookiecutter-hipster-pypackage
 
 The generator will automatically call `hatch env create` at the end.
 
-Then, for the GitHub Actions pipelines to work correctly, you should:
+After pushing to GitHub:
 
-* Enable the GitHub repository in Codecov.
-* Set `CODECOV_TOKEN` in your GitHub repository secrets. You can find in the Codecov settings of the corresponding project.
-* [Create a token](https://pypi.org/help/#apitoken) for your PyPI account and set the following GitHub repository secrets:
-    * `HATCH_INDEX_USER`: `__token__`
-    * `HATCH_INDEX_AUTH`: Your API token
+1. Set up `.pypirc` locally thru https://pypi.org/manage/account/
+
+<img width="813" alt="image" src="https://github.com/ahuang11/cookiecutter-hipster-pypackage/assets/15331990/47bd9aa0-8faa-45a8-8024-060ad19237ff">
+
+```
+[distutils]
+index-servers =
+    pypi
+
+[pypi]
+  username = __token__
+  password = pypi-abcdefghij...
+```
+
+1. Then push `v0.0.0`
+
+```
+hatch init
+twine upload dist/*
+```
+
+1. Create another API token for the project thru https://pypi.org/manage/account/
+
+<img width="382" alt="image" src="https://github.com/ahuang11/cookiecutter-hipster-pypackage/assets/15331990/9b9d2162-9cdf-4bae-8a22-6ee9789a537a">
+
+1. Enable GitHub Pages in settings > pages
+
+<img width="801" alt="image" src="https://github.com/ahuang11/cookiecutter-hipster-pypackage/assets/15331990/accd33a5-dc64-4df1-a009-07a3eed0bc38">
+
+1. Set up `PYPI_API_TOKEN` in settings > secrets > actions
+
+<img width="1215" alt="image" src="https://github.com/ahuang11/cookiecutter-hipster-pypackage/assets/15331990/7328fc80-4613-40d8-99a3-15af830d2bec">
+
+1. Set up `CODECOV_TOKEN` thru https://app.codecov.io/gh/ in settings > secrets > actions
+
+<img width="668" alt="image" src="https://github.com/ahuang11/cookiecutter-hipster-pypackage/assets/15331990/1d6e7af0-25de-4101-849f-ea44ab0f6c50">
+
+1. Now you can release to PyPi by making a tag!
+
+<img width="1169" alt="image" src="https://github.com/ahuang11/cookiecutter-hipster-pypackage/assets/15331990/7820461a-d559-4018-b50c-c77a612cb81d">
+
+<img width="938" alt="image" src="https://github.com/ahuang11/cookiecutter-hipster-pypackage/assets/15331990/3ac62bd3-8a1f-47c1-80c9-109db0b9a0ba">
 
 ### With cruft
 
