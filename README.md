@@ -41,7 +41,7 @@ index-servers =
 1. Then push `v0.0.0`
 
 ```
-hatch init
+hatch build
 twine upload dist/*
 ```
 
